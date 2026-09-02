@@ -454,7 +454,8 @@
   }
 
   /* ============ day detail sections ============ */
-  .day-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:8px;}
+  .day-head{display:grid;grid-template-columns:1.3fr 1fr;align-items:start;gap:24px 46px;margin-bottom:8px;}
+  @media (max-width:860px){ .day-head{grid-template-columns:1fr;} }
   .day-kicker{font-family:var(--font-display);font-weight:700;font-size:14.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:10px;}
   .day-title{font-size:clamp(28px,3.4vw,38px);line-height:1.1;margin-bottom:8px;}
   .day-sub{font-size:18px;line-height:1.4;color:rgba(var(--text-rgb),.78);max-width:60ch;}
