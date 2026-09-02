@@ -304,9 +304,7 @@
     position:relative;padding-right:8px;
     display:block;text-decoration:none;color:inherit;
     cursor:pointer;
-    transition:transform .15s ease, opacity .15s ease;
   }
-  .step:hover{opacity:.82;transform:translateY(-2px);}
   .step:hover .name{text-decoration:underline;text-underline-offset:3px;}
   .step .dot{
     width:50px;height:50px;border-radius:50%;
@@ -315,9 +313,7 @@
     color:#000;
     margin-bottom:14px;
     box-shadow:0 4px 14px rgba(0,0,0,.35);
-    transition:box-shadow .15s ease;
   }
-  .step:hover .dot{box-shadow:0 6px 18px rgba(0,0,0,.5);}
   .step .dot svg{width:24px;height:24px;}
   .step .num{
     font-family:var(--font-display);font-weight:700;font-size:12.5px;
@@ -327,16 +323,6 @@
   .step .name{font-family:var(--font-display);font-weight:700;font-size:23.5px;line-height:1.15;margin-top:2px;}
   .step-line{
     display:none;
-  }
-  @media (min-width:861px){
-    .step:not(:last-child)::after{
-      content:"";
-      position:absolute;
-      top:21px;left:calc(100% - 8px);
-      width:calc(100% - 34px);
-      height:2px;
-      background:rgba(255,255,255,.28);
-    }
   }
 
   /* ============ floating card ============ */
