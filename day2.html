@@ -190,8 +190,18 @@
     margin:-6px -4px;
     display:inline-block;
   }
-  nav.links a:hover{opacity:1;color:var(--green);}
-  nav.links a[aria-current="page"]{opacity:1;color:var(--green);}
+  nav.links a:hover{opacity:1;}
+  nav.links a[aria-current="page"]{opacity:1;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px;}
+  nav.links a.nav-link-links:hover,
+  nav.links a.nav-link-links[aria-current="page"]{color:var(--green);}
+  nav.links a.nav-link-day1{color:var(--day1-ink);}
+  nav.links a.nav-link-day2{color:var(--day2-ink);}
+  nav.links a.nav-link-day3{color:var(--day3-ink);}
+  nav.links a.nav-link-day4{color:var(--day4-ink);}
+  :root[data-theme="light"] nav.links a.nav-link-day1{color:var(--day1-deep);}
+  :root[data-theme="light"] nav.links a.nav-link-day2{color:var(--day2-deep);}
+  :root[data-theme="light"] nav.links a.nav-link-day3{color:var(--day3-deep);}
+  :root[data-theme="light"] nav.links a.nav-link-day4{color:var(--day4-deep);}
 
   /* ============ mobile nav toggle ============ */
   .nav-toggle{
@@ -657,11 +667,11 @@
   <div class="nav-inner">
     <a class="logo" href="index.html"><b>Inclusion in Action</b><em>Digital Hub</em></a>
     <nav class="links" id="navLinks">
-      <a href="day1.html">Future of Inclusion</a>
-      <a href="day2.html" aria-current="page">High‑Performing Teams</a>
-      <a href="day3.html">Accessibility</a>
-      <a href="day4.html">Communities</a>
-      <a href="index.html#links">Links</a>
+      <a class="nav-link-day1" href="day1.html">Future of Inclusion</a>
+      <a class="nav-link-day2" href="day2.html" aria-current="page">High‑Performing Teams</a>
+      <a class="nav-link-day3" href="day3.html">Accessibility</a>
+      <a class="nav-link-day4" href="day4.html">Communities</a>
+      <a class="nav-link-links" href="index.html#links">Links</a>
     </nav>
     <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
       <svg class="icon-burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
