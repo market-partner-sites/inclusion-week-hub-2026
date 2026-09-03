@@ -499,14 +499,17 @@
   @media (max-width:860px){ .day-body{grid-template-columns:1fr;} }
 
   .day-photo{
-    margin:30px auto 0;
-    max-width:640px;
+    float:right;
+    width:380px;
+    max-width:44%;
+    margin:4px 0 22px 32px;
     border-radius:16px;
     background-size:cover;background-position:center;
     aspect-ratio:2.3/1;
     box-shadow:0 20px 46px rgba(0,0,0,.32);
   }
-  @media (max-width:640px){ .day-photo{aspect-ratio:4/3;} }
+  @media (max-width:860px){ .day-photo{float:none;width:100%;max-width:100%;margin:24px 0 0;aspect-ratio:16/9;} }
+  @media (max-width:480px){ .day-photo{aspect-ratio:4/3;} }
   .day-body .lead-p{font-size:18px;line-height:1.4;color:rgba(var(--text-rgb),.86);max-width:62ch;}
   .day-body .lead-p + .lead-p{margin-top:14px;}
 
