@@ -466,8 +466,17 @@
   }
 
   /* ============ day detail sections ============ */
-  .day-head{display:grid;grid-template-columns:1.3fr 1fr;align-items:start;gap:24px 46px;margin-bottom:8px;}
-  @media (max-width:860px){ .day-head{grid-template-columns:1fr;} }
+  .day-detail{display:grid;grid-template-columns:1.3fr 1fr;column-gap:46px;align-items:start;margin-bottom:8px;}
+  .detail-content{margin-top:20px;}
+  .detail-reflect{margin-top:20px;}
+  @media (max-width:860px){
+    .day-detail{display:flex;flex-direction:column;}
+    .day-detail > .col-left, .day-detail > .col-right{display:contents;}
+    .detail-title{order:1;}
+    .booth-card{order:2;margin-top:24px;}
+    .detail-content{order:3;}
+    .detail-reflect{order:4;margin-top:46px;}
+  }
   .day-kicker{font-family:var(--font-display);font-weight:700;font-size:14.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:10px;}
   .day-title{font-size:clamp(28px,3.4vw,38px);line-height:1.1;margin-bottom:8px;}
   .day-sub{font-size:18px;line-height:1.4;color:rgba(var(--text-rgb),.78);max-width:60ch;}
@@ -499,8 +508,7 @@
   .booth-poll-text{font-size:14px;line-height:1.4;color:rgba(21,16,24,.72);}
   .booth-poll-text b{display:block;font-size:15px;color:#151018;margin-bottom:2px;}
 
-  .day-body{margin-top:20px;display:grid;grid-template-columns:1.3fr 1fr;gap:46px;}
-  @media (max-width:860px){ .day-body{grid-template-columns:1fr;} }
+  
 
   .day-photo{
     width:100%;
@@ -511,8 +519,8 @@
     box-shadow:0 20px 46px rgba(0,0,0,.32);
   }
   @media (max-width:480px){ .day-photo{aspect-ratio:4/3;} }
-  .day-body .lead-p{font-size:18px;line-height:1.4;color:rgba(var(--text-rgb),.86);max-width:62ch;}
-  .day-body .lead-p + .lead-p{margin-top:14px;}
+  .detail-content .lead-p{font-size:18px;line-height:1.4;color:rgba(var(--text-rgb),.86);max-width:62ch;}
+  .detail-content .lead-p + .lead-p{margin-top:14px;}
 
   .stat-row{display:flex;gap:28px;margin-bottom:26px;flex-wrap:wrap;}
   .stat{font-family:var(--font-display);}
@@ -547,6 +555,8 @@
   }
   .action-list li:last-child{border-bottom:1px solid var(--line);}
   .action-list li b{color:var(--text);font-weight:700;}
+  .action-list li .action-title{display:block;margin-bottom:4px;}
+  .action-list li .action-ref{font-weight:500;}
 
   .bullets{margin-top:6px;}
   .bullets li{
@@ -675,7 +685,7 @@
       <a class="nav-link-day2" href="day2.html">High‑Performing Teams</a>
       <a class="nav-link-day3" href="day3.html">Accessibility</a>
       <a class="nav-link-day4" href="day4.html">Communities</a>
-      <a class="nav-link-links" href="index.html#links">Links</a>
+      <a class="nav-link-links" href="links.html">Links</a>
     </nav>
     <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
       <svg class="icon-burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -695,13 +705,27 @@
 <section class="card-shell" id="day1" style="padding-top:78px;">
     <div class="wrap">
       <div class="card" style="--accent:var(--day1);--accent-tint:var(--day1-tint);--accent-ink:var(--day1-ink);--accent-deep:var(--day1-deep);">
-        <div class="day-head">
-          <div>
+        <div class="day-detail">
+      <div class="col-left">
+        <div class="detail-title">
             <div class="day-kicker">Day 1 - 14 September</div>
             <h2 class="day-title">Future of Inclusion</h2>
             <p class="day-sub">Bringing our Strategy to Life. Leading the way. Our Inclusion Strategy, our progress and our opportunity to create lasting impact.</p>
           </div>
-          <div class="booth-card">
+        <div class="detail-content">
+            <p class="lead-p">Inclusion is how we create an environment where everyone can contribute, grow, and succeed. Our strategy embeds inclusion into how we work, lead, and make decisions every day.</p>
+            <p class="lead-p">Our approach builds trust through clear expectations, fair opportunities, accessible experiences, and accountable leadership. Success is how consistently our people experience inclusion every day.</p>
+
+            <div class="rule-heading" style="margin-top:32px;"><h3>Our priorities</h3></div>
+            <ul class="bullets">
+              <li><b>Embed inclusion</b> across the employee experience, from onboarding and development to performance conversations.</li>
+              <li><b>Strengthen connection and growth</b> through Communities that build networks, shared experiences, and career opportunities.</li>
+              <li><b>Advance accessibility globally</b> by making support, tools, and resources easier to access across roles and regions.</li>
+            </ul>
+          </div>
+      </div>
+      <div class="col-right">
+        <div class="booth-card">
             <div class="booth-head">
               <div class="booth-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.5 7-11a7 7 0 10-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg></div>
               <div>
@@ -721,22 +745,7 @@
         </div>
       </div>
           </div>
-        </div>
-
-        <div class="day-body">
-          <div>
-            <p class="lead-p">Inclusion is how we create an environment where everyone can contribute, grow, and succeed. Our strategy embeds inclusion into how we work, lead, and make decisions every day.</p>
-            <p class="lead-p">Our approach builds trust through clear expectations, fair opportunities, accessible experiences, and accountable leadership. Success is how consistently our people experience inclusion every day.</p>
-
-            <div class="rule-heading" style="margin-top:32px;"><h3>Our priorities</h3></div>
-            <ul class="bullets">
-              <li><b>Embed inclusion</b> across the employee experience, from onboarding and development to performance conversations.</li>
-              <li><b>Strengthen connection and growth</b> through Communities that build networks, shared experiences, and career opportunities.</li>
-              <li><b>Advance accessibility globally</b> by making support, tools, and resources easier to access across roles and regions.</li>
-            </ul>
-          </div>
-
-          <div>
+        <div class="detail-reflect">
             <div class="reflect-box">
               <div class="lbl">Pause &amp; reflect</div>
               <dl>
@@ -749,13 +758,14 @@
             <div class="action-list">
               <div class="lbl">Inclusion in action</div>
               <ul>
-                <li><b>Share your perspective</b> — Respond to our Inclusion Week question and help shape the conversation.</li>
-                <li><b>Join the conversation</b> — Register your spot via BU INCLUSION WEEK&lt;GO&gt;.</li>
-                <li><b>Explore more</b> — Visit the Inclusion Hub in the London Pantry, 3QVS.</li>
+                <li><b class="action-title">Share your perspective</b>Respond to our Inclusion Week question and help shape the conversation</li>
+                <li><b class="action-title">Join the conversation</b>Register your spot via <b class="action-ref">BU INCLUSION WEEK&lt;GO&gt;</b></li>
+                <li><b class="action-title">Explore more</b>Visit the Inclusion Hub in the London Pantry, 3QVS</li>
               </ul>
             </div>
           </div>
-        </div>
+      </div>
+    </div>
       </div>
     </div>
   </section>
@@ -784,17 +794,6 @@
 
 <footer id="links">
   <div class="wrap">
-    <div class="rule-heading"><h2>Continue your inclusion journey</h2></div>
-    <div class="foot-links">
-      <div><b>DI &lt;GO&gt;</b>Internal Terminal function with an overview of Inclusion.</div>
-      <div><b>DI JOIN &lt;GO&gt;</b>Internal Terminal function to join a Community as a member.</div>
-      <div><b>APPT DCAL &lt;GO&gt;</b>Internal Terminal function with a calendar of all Inclusion events.</div>
-      <div><b>BU DI &lt;GO&gt;</b>Deepen your Inclusion knowledge and other trainings on Bloomberg University.</div>
-      <div><b>MYHR &lt;GO&gt;</b>Update your Self‑ID and personal information in Workday.</div>
-      <div><b>BU LEAD &lt;GO&gt;</b>Discover Bloomberg's six key leadership behaviors.</div>
-      <div><b>Talent Catalogue</b>Grow. Lead. Accelerate. View upcoming courses.</div>
-      <div><b>BU CAREER &lt;GO&gt;</b>Learn more about career development at Bloomberg.</div>
-    </div>
     <div class="copyright">&copy; 2026 Bloomberg L.P. All rights reserved.</div>
   </div>
 </footer>
