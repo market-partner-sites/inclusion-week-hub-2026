@@ -493,6 +493,11 @@
   .booth-q{padding-top:12px;border-top:1px solid rgba(0,0,0,.14);}
   .booth-q-label{font-family:var(--font-display);font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:7px;}
   .booth-q-text{font-weight:600;font-size:15.5px;line-height:1.4;}
+  .booth-poll{margin-top:12px;padding-top:12px;border-top:1px solid rgba(0,0,0,.14);display:flex;align-items:center;gap:14px;}
+  .booth-poll img{width:60px;height:60px;flex:none;border-radius:6px;background:#fff;padding:5px;box-shadow:0 4px 10px rgba(0,0,0,.14);}
+  .booth-poll-label{font-family:var(--font-display);font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:4px;}
+  .booth-poll-text{font-size:14px;line-height:1.4;color:rgba(21,16,24,.72);}
+  .booth-poll-text b{display:block;font-size:15px;color:#151018;margin-bottom:2px;}
 
   .day-body{margin-top:20px;display:grid;grid-template-columns:1.3fr 1fr;gap:46px;}
   @media (max-width:860px){ .day-body{grid-template-columns:1fr;} }
@@ -623,7 +628,7 @@
   .foot-links{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 40px;}
   @media (max-width:720px){ .foot-links{grid-template-columns:1fr;} }
   .foot-links div{font-size:17px;line-height:1.5;padding:14px 0;border-top:1px solid var(--line);color:rgba(var(--text-rgb),.75);}
-  .foot-links b{color:var(--text);font-family:var(--font-display);}
+  .foot-links b{display:block;margin-bottom:4px;color:var(--text);font-family:var(--font-display);}
   .copyright{
     margin-top:48px;border-top:1px solid var(--line);
     padding:20px 0;text-align:center;font-size:13.5px;color:var(--ink-faint);
@@ -708,6 +713,13 @@
           <div class="booth-q-label">Question of the day</div>
           <div class="booth-q-text">&ldquo;Where can Communities create the greatest impact?&rdquo;</div>
         </div>
+      <div class="booth-poll">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAAFoAQAAAABSnlx4AAADKElEQVR42u2bPY7jRhCFvxIJUI44N6Bu4CP0HMJwat+E1Emc24mPwLmEAWfN0BkZLEBhST4HTWp+dieYDUYiUJ1QgB4KjVco9ntVTRMfWAcc7WhH/wgaKV5/NulZjlDHUiLEQtdSLCRncDe5VCRTypoiIGm0t7nMJEnjuwErSVL7aif5u+jTd/Y9vYuO30F77FdomdlDDlQjEPrLgfMJsEeKBU6DmTXO965in+0IUGq2puozqe2Ozvf9xC4mdH4A6uic7C12DmACLkAVwSgvP4nu54sR2uGwEEsBT873p8fOgeVXgK/vor/8BfDPN8q0GjMR+mKhjuWE2upbNeN68F7ROVTPlr47ZogB0/lEjsHRkDN4S99QSGrL6ao1NZqaSi/L2hLMGdyFByyTcc82g1dpghCLBUnT6u2cwb34+aRMtzIspVSMBE2mxnN5M3Tdkok6dVtWVzebWRjMgGyB7ugM7gBtaoIutpZem55DoZRAGOxArdEZ3MFb09SEPlPqgqp90QWNxYLacjJJ/ta8f9+wrtmAYsQo/zss5z80r/9Z6HKMKjqDN6o0taWkhnQCjqu0JESA0OOVth/0ue5ng0oXk7pSahhyeDqlrlq2pAGEM7gPPy8lb7DOdFMhxlSR7gF3kktpoVa/zedXZVqtuQQo3QPeQaUlrSmlwxAIGuFFFTqD915p15sQafgXNJoUy2m7PRF6vNL2okzXA4/UOQvrazTTc7fbc7kPdKXl6gFhnc9vN2EuZoSuWJzBm6FNZlas8wYYjqYmpasawR4B74Lux8+r3+4PpmOvoXwzB3Q/vwvfsK10eyL1ZrbBoEnqs8U94I3Qna1r0yc9JkVmSzrUHpmzZCScwXtG54D9AvD1b+rfj19yAFnd9DM8/fYviCGboDuO5MDhT4A5/8hOpg/tO8dj/3BsmdnDBOcTmdQOafiX5I3M7GE+ON/3HxspZgtQjpua2QYVW99mBb4+AZ3vz4j9nJ3UXEn65LnbkhxftiQP73zffS6VZgpJcBJ63mjN63K+Pzd2/qJz8kHtc7bjbJAa2J3ZegK6n98H2vwrakc7+hPQ/wPQ0pMJVuk3fgAAAABJRU5ErkJggg==" alt="QR code to join today's live poll" width="60" height="60" />
+        <div>
+          <div class="booth-poll-label">Scan to vote</div>
+          <div class="booth-poll-text"><b>Join today's live poll</b>Scan with your phone camera to vote in the question live right now.</div>
+        </div>
+      </div>
       </div>
     </div>
 
@@ -753,21 +765,6 @@
   </div>
 </section>
 
-
-
-<section class="section-black" style="padding:40px 0;">
-  <div class="wrap">
-    <div class="poll-scan" style="--accent-tint:var(--day4-tint);--accent-deep:var(--day4-deep);">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAAFoAQAAAABSnlx4AAADKElEQVR42u2bPY7jRhCFvxIJUI44N6Bu4CP0HMJwat+E1Emc24mPwLmEAWfN0BkZLEBhST4HTWp+dieYDUYiUJ1QgB4KjVco9ntVTRMfWAcc7WhH/wgaKV5/NulZjlDHUiLEQtdSLCRncDe5VCRTypoiIGm0t7nMJEnjuwErSVL7aif5u+jTd/Y9vYuO30F77FdomdlDDlQjEPrLgfMJsEeKBU6DmTXO965in+0IUGq2puozqe2Ozvf9xC4mdH4A6uic7C12DmACLkAVwSgvP4nu54sR2uGwEEsBT873p8fOgeVXgK/vor/8BfDPN8q0GjMR+mKhjuWE2upbNeN68F7ROVTPlr47ZogB0/lEjsHRkDN4S99QSGrL6ao1NZqaSi/L2hLMGdyFByyTcc82g1dpghCLBUnT6u2cwb34+aRMtzIspVSMBE2mxnN5M3Tdkok6dVtWVzebWRjMgGyB7ugM7gBtaoIutpZem55DoZRAGOxArdEZ3MFb09SEPlPqgqp90QWNxYLacjJJ/ta8f9+wrtmAYsQo/zss5z80r/9Z6HKMKjqDN6o0taWkhnQCjqu0JESA0OOVth/0ue5ng0oXk7pSahhyeDqlrlq2pAGEM7gPPy8lb7DOdFMhxlSR7gF3kktpoVa/zedXZVqtuQQo3QPeQaUlrSmlwxAIGuFFFTqD915p15sQafgXNJoUy2m7PRF6vNL2okzXA4/UOQvrazTTc7fbc7kPdKXl6gFhnc9vN2EuZoSuWJzBm6FNZlas8wYYjqYmpasawR4B74Lux8+r3+4PpmOvoXwzB3Q/vwvfsK10eyL1ZrbBoEnqs8U94I3Qna1r0yc9JkVmSzrUHpmzZCScwXtG54D9AvD1b+rfj19yAFnd9DM8/fYviCGboDuO5MDhT4A5/8hOpg/tO8dj/3BsmdnDBOcTmdQOafiX5I3M7GE+ON/3HxspZgtQjpua2QYVW99mBb4+AZ3vz4j9nJ3UXEn65LnbkhxftiQP73zffS6VZgpJcBJ63mjN63K+Pzd2/qJz8kHtc7bjbJAa2J3ZegK6n98H2vwrakc7+hPQ/wPQ0pMJVuk3fgAAAABJRU5ErkJggg==" alt="QR code to join today's live poll" width="104" height="104" />
-      <div>
-        <div class="lbl">Scan to vote</div>
-        <h3>Join today's live poll</h3>
-        <p>Scan with your phone camera to vote in the question that's live right now at the Inclusion Hub.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <div class="wash">
 <section class="card-shell" id="team">
     <div class="wrap">
@@ -793,14 +790,14 @@
   <div class="wrap">
     <div class="rule-heading"><h2>Continue your inclusion journey</h2></div>
     <div class="foot-links">
-      <div><b>DI &lt;GO&gt;</b> — Internal Terminal function with an overview of Inclusion.</div>
-      <div><b>DI JOIN &lt;GO&gt;</b> — Internal Terminal function to join a Community as a member.</div>
-      <div><b>APPT DCAL &lt;GO&gt;</b> — Internal Terminal function with a calendar of all Inclusion events.</div>
-      <div><b>BU DI &lt;GO&gt;</b> — Deepen your Inclusion knowledge and other trainings on Bloomberg University.</div>
-      <div><b>MYHR &lt;GO&gt;</b> — Update your Self‑ID and personal information in Workday.</div>
-      <div><b>BU LEAD &lt;GO&gt;</b> — Discover Bloomberg's six key leadership behaviors.</div>
-      <div><b>Talent Catalogue</b> — Grow. Lead. Accelerate. View upcoming courses.</div>
-      <div><b>BU CAREER &lt;GO&gt;</b> — Learn more about career development at Bloomberg.</div>
+      <div><b>DI &lt;GO&gt;</b>Internal Terminal function with an overview of Inclusion.</div>
+      <div><b>DI JOIN &lt;GO&gt;</b>Internal Terminal function to join a Community as a member.</div>
+      <div><b>APPT DCAL &lt;GO&gt;</b>Internal Terminal function with a calendar of all Inclusion events.</div>
+      <div><b>BU DI &lt;GO&gt;</b>Deepen your Inclusion knowledge and other trainings on Bloomberg University.</div>
+      <div><b>MYHR &lt;GO&gt;</b>Update your Self‑ID and personal information in Workday.</div>
+      <div><b>BU LEAD &lt;GO&gt;</b>Discover Bloomberg's six key leadership behaviors.</div>
+      <div><b>Talent Catalogue</b>Grow. Lead. Accelerate. View upcoming courses.</div>
+      <div><b>BU CAREER &lt;GO&gt;</b>Learn more about career development at Bloomberg.</div>
     </div>
     <div class="copyright">&copy; 2026 Bloomberg L.P. All rights reserved.</div>
   </div>
