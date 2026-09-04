@@ -4,6 +4,14 @@
 <meta charset="utf-8" />
 <title>Inclusion in Action</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('inclusionHubTheme');
+    if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+  } catch(e){}
+})();
+</script>
 <style>
   /* ============ tokens ============ */
   :root{
@@ -859,7 +867,9 @@
   }
 
   btn.addEventListener('click', function(){
-    root.setAttribute('data-theme', isLight() ? 'dark' : 'light');
+    var next = isLight() ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('inclusionHubTheme', next); } catch(e){}
     updateA11y();
   });
 
