@@ -484,15 +484,20 @@
     background-size:cover;background-position:center;
     min-height:260px;
   }
-  .pantry-content{padding:38px 42px;}
-  @media (max-width:720px){ .pantry-content{padding:30px 26px;} }
+  .pantry-content{
+    padding:38px 42px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:40px;flex-wrap:wrap;
+  }
+  .pantry-text{flex:1 1 320px;}
+  @media (max-width:720px){ .pantry-content{padding:30px 26px;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:24px;} .pantry-text{flex:none;} }
   .pantry-eyebrow{
     font-family:var(--font-display);font-weight:700;font-size:13px;
     letter-spacing:.14em;text-transform:uppercase;color:var(--green);
     margin-bottom:12px;
   }
-  .pantry-content h3{font-family:var(--font-display);font-weight:700;font-size:22px;line-height:1.35;max-width:480px;color:#fff;margin-bottom:26px;}
-  .pantry-times{display:flex;gap:34px;flex-wrap:wrap;}
+  .pantry-content h3{font-family:var(--font-display);font-weight:700;font-size:22px;line-height:1.35;max-width:480px;color:#fff;}
+  .pantry-times{display:flex;gap:30px;flex-wrap:wrap;flex:none;}
   .pantry-times div{font-size:14px;color:rgba(255,255,255,.65);}
   .pantry-times b{display:block;color:#fff;font-family:var(--font-display);font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;}
   @media (max-width:720px){
@@ -834,8 +839,10 @@
 
         <div class="pantry-banner">
           <div class="pantry-content">
-            <div class="pantry-eyebrow">Visit us in person</div>
-            <h3>Continue these conversations and meet colleagues at the Inclusion Hub in our 3QVS pantry — visit us at the booth each day.</h3>
+            <div class="pantry-text">
+              <div class="pantry-eyebrow">Visit us in person</div>
+              <h3>Continue these conversations and meet colleagues at the Inclusion Hub in our 3QVS pantry — visit us at the booth each day.</h3>
+            </div>
             <div class="pantry-times">
               <div><b>Day 1</b>10&ndash;11am<br>3&ndash;4pm</div>
               <div><b>Day 2</b>12&ndash;1pm<br>3&ndash;4pm</div>
