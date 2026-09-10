@@ -144,6 +144,18 @@
     .rule-heading span,
     .rule-heading h2,
     .rule-heading h3{ font-size:20px; }
+    #welcome .rule-heading{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:10px;
+    }
+    #welcome .rule-heading h2{
+      white-space:normal;
+    }
+    #welcome .rule-heading::after{
+      flex:none;
+      width:48px;
+    }
   }
 
   /* ============ diagonal brand wash ============ */
@@ -773,42 +785,6 @@
       <h1><span class="thin">Bloomberg celebrates</span> <b>Inclusion</b> <span class="thin">this week. And every week.</span></h1>
       <p class="lede">At Bloomberg, Inclusion is a discipline influencing how we design our products, teams and culture so that every voice can shape the work and power high performing teams.</p>
 
-      <div class="two-col week-row">
-        <div class="stepper" style="margin-top:0;padding-top:0;border-top:none;">
-          <div class="cap">Your journey through the week</div>
-          <div class="step-track" style="grid-template-columns:repeat(2,1fr);">
-            <a class="step" href="#day1" aria-label="Jump to Day 1 — Future of Inclusion">
-              <div class="dot" style="--dot:var(--day1)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.4" fill="#fff" stroke="none"/></svg></div>
-              <div class="num">Day 1: 14 September</div>
-              <div class="name">Future of Inclusion</div>
-            </a>
-            <a class="step" href="#day2" aria-label="Jump to Day 2 — High-Performing Teams">
-              <div class="dot" style="--dot:var(--day2)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/><circle cx="17" cy="9" r="2.4"/></svg></div>
-              <div class="num">Day 2: 15 September</div>
-              <div class="name">High‑Performing Teams</div>
-            </a>
-            <a class="step" href="#day3" aria-label="Jump to Day 3 — Accessibility">
-              <div class="dot" style="--dot:var(--day3)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></div>
-              <div class="num">Day 3: 16 September</div>
-              <div class="name">Accessibility</div>
-            </a>
-            <a class="step" href="#day4" aria-label="Jump to Day 4 — Communities in Action">
-              <div class="dot" style="--dot:var(--day4)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="7" cy="8" r="2.6"/><circle cx="17" cy="8" r="2.6"/><circle cx="12" cy="17" r="2.6"/><path d="M8.6 9.6L10.5 15M15.4 9.6L13.5 15M9.3 7.3h5.4"/></svg></div>
-              <div class="num">Day 4: 17 September</div>
-              <div class="name">Communities in Action</div>
-            </a>
-          </div>
-        </div>
-
-        <div class="keybox">
-          <div class="lbl">The key question</div>
-          <div class="q">Inclusion is built in everyday moments. What action are you going to take to make a difference?</div>
-          <label class="sr-only" for="keyQuestionResponse">Your anonymous response to the key question</label>
-          <textarea id="keyQuestionResponse" placeholder="Enter your anonymous response here."></textarea>
-          <button class="submit" type="button">Submit response</button>
-          <div class="foot">Share your perspective at the Inclusion Hub — responses are anonymous and featured live. View responses <a href="#">here</a>.</div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -816,7 +792,7 @@
   <section class="card-shell" id="welcome">
     <div class="wrap">
       <div class="card">
-        <div class="rule-heading"><h2>Welcome to Inclusion Week</h2></div>
+        <div class="rule-heading"><h2>Welcome to Inclusion Week Hosted by the Inclusion Center of Excellence</h2></div>
         <p class="subhead">We all have a role to play in creating a workplace where everyone can thrive.</p>
         <p class="intro-text">Throughout the week, we'll explore how everyday choices can strengthen inclusion across leadership, teams, accessible experiences and our Communities &mdash; moving inclusion from intention to impact.</p>
         <div class="video-placeholder video-placeholder--full">
@@ -861,6 +837,47 @@
               <div><b>Day 4</b>12&ndash;1pm<br>3&ndash;4pm</div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero" style="padding-top:0;">
+    <div class="wrap">
+      <div class="two-col week-row">
+        <div class="stepper" style="margin-top:0;padding-top:0;border-top:none;">
+          <div class="cap">Your journey through the week</div>
+          <div class="step-track" style="grid-template-columns:repeat(2,1fr);">
+            <a class="step" href="#day1" aria-label="Jump to Day 1 — Future of Inclusion">
+              <div class="dot" style="--dot:var(--day1)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.4" fill="#fff" stroke="none"/></svg></div>
+              <div class="num">Day 1: 14 September</div>
+              <div class="name">Future of Inclusion</div>
+            </a>
+            <a class="step" href="#day2" aria-label="Jump to Day 2 — High-Performing Teams">
+              <div class="dot" style="--dot:var(--day2)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/><circle cx="17" cy="9" r="2.4"/></svg></div>
+              <div class="num">Day 2: 15 September</div>
+              <div class="name">High‑Performing Teams</div>
+            </a>
+            <a class="step" href="#day3" aria-label="Jump to Day 3 — Accessibility">
+              <div class="dot" style="--dot:var(--day3)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></div>
+              <div class="num">Day 3: 16 September</div>
+              <div class="name">Accessibility</div>
+            </a>
+            <a class="step" href="#day4" aria-label="Jump to Day 4 — Communities in Action">
+              <div class="dot" style="--dot:var(--day4)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="7" cy="8" r="2.6"/><circle cx="17" cy="8" r="2.6"/><circle cx="12" cy="17" r="2.6"/><path d="M8.6 9.6L10.5 15M15.4 9.6L13.5 15M9.3 7.3h5.4"/></svg></div>
+              <div class="num">Day 4: 17 September</div>
+              <div class="name">Communities in Action</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="keybox">
+          <div class="lbl">The key question</div>
+          <div class="q">Inclusion is built in everyday moments. What action are you going to take to make a difference?</div>
+          <label class="sr-only" for="keyQuestionResponse">Your anonymous response to the key question</label>
+          <textarea id="keyQuestionResponse" placeholder="Enter your anonymous response here."></textarea>
+          <button class="submit" type="button">Submit response</button>
+          <div class="foot">Share your perspective at the Inclusion Hub — responses are anonymous and featured live. View responses <a href="#">here</a>.</div>
         </div>
       </div>
     </div>
