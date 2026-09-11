@@ -524,14 +524,6 @@
   .day-detail{display:grid;grid-template-columns:1.3fr 1fr;column-gap:46px;align-items:start;margin-bottom:8px;}
   .detail-content{margin-top:20px;}
   .detail-reflect{margin-top:36px;}
-  .reflect-box--full{grid-column:1/-1;container-type:inline-size;width:100%;}
-  .reflect-box.reflect-box--full dl{grid-template-columns:repeat(4,1fr);}
-  @container (max-width:700px){
-    .reflect-box.reflect-box--full dl{grid-template-columns:1fr 1fr;}
-  }
-  @container (max-width:380px){
-    .reflect-box.reflect-box--full dl{grid-template-columns:1fr;}
-  }
   @media (max-width:860px){
     .day-detail{display:flex;flex-direction:column;}
     .day-detail > .col-left, .day-detail > .col-right{display:contents;}
@@ -539,7 +531,6 @@
     .booth-card{order:2;margin-top:24px;}
     .detail-content{order:3;}
     .detail-reflect{order:4;margin-top:46px;}
-    .reflect-box--full{order:5;margin-top:40px;}
   }
   .day-kicker{font-family:var(--font-display);font-weight:700;font-size:14.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:10px;}
   .day-title{font-size:clamp(28px,3.4vw,38px);line-height:1.1;margin-bottom:8px;}
@@ -998,9 +989,7 @@
                 <li><b class="action-title">Explore more</b>Visit the Inclusion Hub in the London Pantry, 3QVS</li>
               </ul>
             </div>
-          </div>
-      </div>
-      <div class="reflect-box reflect-box--full" style="margin-top:40px;">
+      <div class="reflect-box" style="margin-top:40px;">
               <div class="lbl">Questions to ask yourself</div>
               <dl>
                 <div><dt>Understand</dt><dd>Explore Bloomberg's Inclusion Strategy and what it means for our people, culture and business.</dd></div>
@@ -1009,6 +998,8 @@
                 <div><dt>Act</dt><dd>Choose one opportunity where you can intentionally build inclusion in from the start.</dd></div>
               </dl>
             </div>
+          </div>
+      </div>
     </div>
       </div>
     </div>
